@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+100.times do
+  Car.create(
+    make: Faker::Vehicle.make,
+    model: Faker::Space.nasa_space_craft,
+    year: Faker::Vehicle.year,
+    color: Faker::Color.color_name
+  )
+end

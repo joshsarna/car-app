@@ -1,0 +1,8 @@
+<p>id: <%= @car.id %></p>
+<p>make: <%= @car.make %></p>
+<p>model: <%= @car.model %></p>
+<p>year: <%= @car.year %></p>
+<p>color: <%= @car.color %></p>
+
+<%= button_to "Edit this Car", "/cars/#{@car.id}/edit", method: :get %>
+<%= button_to "Return Home", "/cars", method: :get %>

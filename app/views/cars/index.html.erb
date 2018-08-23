@@ -1,0 +1,12 @@
+<p>This is the index page.</p>
+<%= button_to "Add a New Car", "/cars/new", method: :get %>
+
+<% @cars.each do |car| %>
+  <p>id: <%= car.id %></p>
+  <p>make: <%= car.make %></p>
+  <p>model: <%= car.model %></p>
+  <p>year: <%= car.year %></p>
+  <p>color: <%= car.color %></p>
+  <%= button_to "See More", "/cars/#{car.id}", method: :get %>
+  <hr>
+<% end %>

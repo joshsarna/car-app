@@ -1,0 +1,20 @@
+<%= form_tag "/cars/#{@car.id}", method: :patch do %>
+  <div>
+    Make: <input type="text" name="make" value="<%= @car.make %>">
+  </div>
+  <div>
+    Model: <input type="text" name="model" value="<%= @car.model %>">
+  </div>
+  <div>
+    Year: <input type="text" name="year" value="<%= @car.year %>">
+  </div>
+  <div>
+    Color: <input type="text" name="color" value="<%= @car.color %>">
+  </div>
+  <div>
+    <input type="submit" value="Update Car">
+  </div>
+<% end %>
+
+<%= button_to "Delete this Car", "/cars/#{@car.id}", method: :delete %>
+<%= button_to "Cancel", "/cars/#{@car.id}", method: :get %>
