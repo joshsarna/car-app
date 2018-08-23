@@ -1,11 +1,9 @@
 class CarsController < ApplicationController
   def index
     @cars = Car.all
-    render "index.html.erb"
   end
 
   def new
-    render "new.html.erb"
   end
 
   def create
@@ -21,12 +19,10 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
-    render "show.html.erb"
   end
 
   def edit
     @car = Car.find(params[:id])
-    render "edit.html.erb"
   end
 
   def update
